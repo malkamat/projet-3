@@ -33,10 +33,13 @@ body {
 
         &__heading {
             text-align: center;
-            color: $color-ohmyfood;
             margin: 0;
             vertical-align: middle;
             font-size: $taille-police-header;
+            &--homepage {
+                text-decoration: none;
+                color: $color-ohmyfood;
+            }
 
 
         }
@@ -89,6 +92,7 @@ body {
             &--wiggle {
                 text-decoration: none;
                 color: $color-ohmyfood;
+                font-weight: bolder;
 
                 &:hover {
                     display: inline-block;

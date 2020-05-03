@@ -18,15 +18,18 @@ body {
   flex-direction: column;
 }
 body .header {
-  background-color: #709b89;
+  background-color: #58967c;
   line-height: 200px;
 }
 body .header__heading {
   text-align: center;
-  color: #eecc5f;
   margin: 0;
   vertical-align: middle;
-  font-size: 5em;
+  font-size: 6em;
+}
+body .header__heading--homepage {
+  text-decoration: none;
+  color: #e4bc38;
 }
 body .menus {
   background-color: #f3f3f3;
@@ -52,11 +55,11 @@ body .menus .menu-prev-1__image--zoom {
   width: 100%;
   height: 100%;
   transform: scale(1);
-  transition: transform 500ms;
+  transition: transform 400ms, opacity 800ms;
 }
 body .menus .menu-prev-1__image--zoom:hover {
   transform: scale(1.3);
-  opacity: 0.8;
+  opacity: 0.75;
 }
 body .menus .menu-prev-2 {
   box-shadow: 1px 1px 12px 5px #d6d4d4;
@@ -74,11 +77,11 @@ body .menus .menu-prev-2__image--zoom {
   width: 100%;
   height: 100%;
   transform: scale(1);
-  transition: transform 500ms;
+  transition: transform 400ms, opacity 800ms;
 }
 body .menus .menu-prev-2__image--zoom:hover {
   transform: scale(1.3);
-  opacity: 0.8;
+  opacity: 0.75;
 }
 body .menus .menu-prev-3 {
   box-shadow: 1px 1px 12px 5px #d6d4d4;
@@ -96,11 +99,11 @@ body .menus .menu-prev-3__image--zoom {
   width: 100%;
   height: 100%;
   transform: scale(1);
-  transition: transform 500ms;
+  transition: transform 400ms, opacity 800ms;
 }
 body .menus .menu-prev-3__image--zoom:hover {
   transform: scale(1.3);
-  opacity: 0.8;
+  opacity: 0.75;
 }
 body .menus .menu-prev-4 {
   box-shadow: 1px 1px 12px 5px #d6d4d4;
@@ -118,17 +121,17 @@ body .menus .menu-prev-4__image--zoom {
   width: 100%;
   height: 100%;
   transform: scale(1);
-  transition: transform 500ms;
+  transition: transform 400ms, opacity 800ms;
 }
 body .menus .menu-prev-4__image--zoom:hover {
   transform: scale(1.3);
-  opacity: 0.8;
+  opacity: 0.75;
 }
 body .footer {
   position: fixed;
   bottom: 0;
   width: 100%;
-  background-color: #709b89;
+  background-color: #58967c;
   line-height: 50px;
   padding-right: 40px;
 }
@@ -138,11 +141,12 @@ body .footer__items {
   padding-right: 40px;
   justify-content: space-between;
   list-style-type: none;
-  font-size: 2em;
+  font-size: 2.2em;
 }
 body .footer__items--wiggle {
   text-decoration: none;
-  color: #eecc5f;
+  color: #e4bc38;
+  font-weight: bolder;
 }
 body .footer__items--wiggle:hover {
   display: inline-block;
