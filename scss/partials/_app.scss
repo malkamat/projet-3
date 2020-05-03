@@ -27,11 +27,11 @@ body {
     display: flex;
     flex-direction: column;
 
-    header {
+    .header {
         background-color: $main-color;
         line-height: 200px;
 
-        h1 {
+        &__titre-principal {
             text-align: center;
             color: $color-ohmyfood;
             margin: 0;
