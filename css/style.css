@@ -132,13 +132,20 @@ body .carte {
   justify-content: center;
   padding-top: 100px;
   background-color: #f3f3f3;
-  padding-bottom: 200px;
+  padding-bottom: 400px;
 }
 body .carte .carte-le-chic-a-la-francaise {
   box-shadow: 1px 1px 12px 5px #d6d4d4;
   width: 60%;
   height: 1500px;
+  padding-bottom: 400px;
   background-color: #fff5fe;
+}
+body .carte .carte-le-chic-a-la-francaise h2 {
+  text-align: center;
+  line-height: 300px;
+  vertical-align: middle;
+  font-size: 3.5em;
 }
 body .carte .carte-le-chic-a-la-francaise ul {
   margin-left: 200px;
@@ -151,7 +158,14 @@ body .carte .carte-le-delice-des-papilles {
   box-shadow: 1px 1px 12px 5px #d6d4d4;
   width: 60%;
   height: 1500px;
+  padding-bottom: 400px;
   background-color: #edefef;
+}
+body .carte .carte-le-delice-des-papilles h2 {
+  text-align: center;
+  line-height: 300px;
+  vertical-align: middle;
+  font-size: 5.5em;
 }
 body .carte .carte-le-delice-des-papilles ul {
   margin-left: 200px;
@@ -161,7 +175,14 @@ body .carte .carte-la-note-enchantee {
   box-shadow: 1px 1px 12px 5px #d6d4d4;
   width: 60%;
   height: 1500px;
+  padding-bottom: 400px;
   background-color: #fcdfdb;
+}
+body .carte .carte-la-note-enchantee h2 {
+  text-align: center;
+  line-height: 300px;
+  vertical-align: middle;
+  font-size: 3.5em;
 }
 body .carte .carte-la-note-enchantee ul {
   margin-left: 100px;
@@ -171,7 +192,14 @@ body .carte .carte-la-palette-du-gout {
   box-shadow: 1px 1px 12px 5px #d6d4d4;
   width: 60%;
   height: 1500px;
+  padding-bottom: 400px;
   background-color: #fdfffd;
+}
+body .carte .carte-la-palette-du-gout h2 {
+  text-align: center;
+  line-height: 300px;
+  vertical-align: middle;
+  font-size: 5.5em;
 }
 body .carte .carte-la-palette-du-gout ul {
   margin-left: 150px;
@@ -204,14 +232,9 @@ body .footer__items--wiggle:hover {
   transform: translate3d(0, 0, 0);
 }
 
-body .carte .carte-le-chic-a-la-francaise h2, body .carte .carte-le-delice-des-papilles h2, body .carte .carte-la-note-enchantee h2, body .carte .carte-la-palette-du-gout h2 {
-  text-align: center;
-  line-height: 300px;
-  vertical-align: middle;
-}
 body .carte .carte-le-chic-a-la-francaise h3, body .carte .carte-le-delice-des-papilles h3, body .carte .carte-la-note-enchantee h3, body .carte .carte-la-palette-du-gout h3 {
   text-align: center;
-  font-size: 1.5em;
+  font-size: 1.8em;
 }
 body .carte .carte-le-chic-a-la-francaise h3 img, body .carte .carte-le-delice-des-papilles h3 img, body .carte .carte-la-note-enchantee h3 img, body .carte .carte-la-palette-du-gout h3 img {
   padding-left: 20px;
@@ -222,7 +245,7 @@ body .carte .carte-le-chic-a-la-francaise ul, body .carte .carte-le-delice-des-p
   padding-left: 0;
   list-style-type: none;
   margin-top: 60px;
-  font-size: 1.3em;
+  font-size: 1.5em;
   display: grid;
   grid-template-columns: 5fr 1fr;
   letter-spacing: 1px;

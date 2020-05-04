@@ -79,11 +79,12 @@ body {
         justify-content: center;
         padding-top: 100px;
         background-color: $background-pricipal;
-        padding-bottom: 200px;
+        padding-bottom: 400px;
+        
 
         .carte-le-chic-a-la-francaise {
             @extend %carte;
-            @include carte ($color-background-menu-le-chic-a-la-francaise, 200px);
+            @include carte ($color-background-menu-le-chic-a-la-francaise,$Taille-police-titres-menus-normal, 200px);
 
             &__items-sous-menu--item1 {
                 grid-column: 1 / span 2;
@@ -94,19 +95,19 @@ body {
 
         .carte-le-delice-des-papilles {
             @extend %carte;
-            @include carte ($color-background-menu-le-delice-des-papilles, 200px);
+            @include carte ($color-background-menu-le-delice-des-papilles,$Taille-police-titres-menus-gros, 200px);
 
         }
 
         .carte-la-note-enchantee {
             @extend %carte;
-            @include carte ($color-background-menu-la-note-enchantee, 100px);
+            @include carte ($color-background-menu-la-note-enchantee,$Taille-police-titres-menus-normal, 100px);
 
         }
 
         .carte-la-palette-du-gout {
             @extend %carte;
-            @include carte ($color-background-menu-la-palette-du-gout, 150px);
+            @include carte ($color-background-menu-la-palette-du-gout,$Taille-police-titres-menus-gros, 150px);
 
 
         }
