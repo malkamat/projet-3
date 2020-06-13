@@ -1,17 +1,16 @@
 @mixin carte($background-color, $font-size-titre, $marge) {
-    box-shadow: 1px 1px 12px 5px rgb(214, 212, 212);
-    width: 60%;
-    height: 1500px;
-    padding-bottom: 400px;
+    
     background-color: $background-color;
+    
     
 
     h2 {
-        text-align: center;
-        line-height: 300px;
-        vertical-align: middle;
+        
         font-size: $font-size-titre;
+   
+        
     }
+    
 
     ul {
 

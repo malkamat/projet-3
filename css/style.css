@@ -12,10 +12,27 @@
     transform: translate3d(4px, 0, 0);
   }
 }
+@keyframes ect {
+  0% {
+    content: "";
+  }
+  33% {
+    content: ".";
+  }
+  66% {
+    content: "..";
+  }
+  100% {
+    content: "...";
+  }
+}
+* {
+  margin: 0;
+  padding: 0;
+}
+
 body {
   margin: 0;
-  display: flex;
-  flex-direction: column;
 }
 body .header {
   background-color: #58967c;
@@ -25,26 +42,42 @@ body .header__heading {
   text-align: center;
   margin: 0;
   vertical-align: middle;
-  font-size: 6em;
+  font-size: 7em;
 }
 body .header__heading--homepage {
   text-decoration: none;
   color: #e4bc38;
+  font-family: "Josefin Sans", sans-serif;
 }
 body .menus {
   background-color: #f3f3f3;
   height: 1500px;
   display: grid;
-  grid-template-columns: 4fr 5fr 5fr 5fr;
-  grid-template-rows: 2fr 10fr 10fr 1fr;
+  grid-template-columns: 500px 500px;
+  grid-template-rows: 1fr 1fr;
   grid-gap: 50px;
+  justify-content: center;
+  padding: 50px 0 100px;
+}
+@media screen and (max-width: 1000px) {
+  body .menus {
+    grid-template-columns: 350px;
+    grid-template-rows: 1FR 1FR 1FR 1FR;
+  }
+}
+@media screen and (max-width: 600px) {
+  body .menus {
+    grid-template-columns: 250px;
+    grid-template-rows: 1FR 1FR 1FR 1FR;
+  }
 }
 body .menus .menu-prev-1 {
   box-shadow: 1px 1px 12px 5px #d6d4d4;
-  grid-column-start: 2;
-  grid-row-start: 2;
+  grid-column-start: 1;
+  grid-row-start: 1;
   overflow: hidden;
   position: relative;
+  margin: 0;
 }
 body .menus .menu-prev-1__image {
   position: absolute;
@@ -59,14 +92,21 @@ body .menus .menu-prev-1__image--zoom {
 }
 body .menus .menu-prev-1__image--zoom:hover {
   transform: scale(1.3);
-  opacity: 0.75;
+  opacity: 0.7;
+}
+@media screen and (max-width: 1000px) {
+  body .menus .menu-prev-1 {
+    grid-row-start: 1;
+    grid-column-start: 1;
+  }
 }
 body .menus .menu-prev-2 {
   box-shadow: 1px 1px 12px 5px #d6d4d4;
-  grid-column-start: 3;
-  grid-row-start: 2;
+  grid-column-start: 2;
+  grid-row-start: 1;
   overflow: hidden;
   position: relative;
+  margin: 0;
 }
 body .menus .menu-prev-2__image {
   position: absolute;
@@ -81,14 +121,21 @@ body .menus .menu-prev-2__image--zoom {
 }
 body .menus .menu-prev-2__image--zoom:hover {
   transform: scale(1.3);
-  opacity: 0.75;
+  opacity: 0.7;
+}
+@media screen and (max-width: 1000px) {
+  body .menus .menu-prev-2 {
+    grid-row-start: 2;
+    grid-column-start: 1;
+  }
 }
 body .menus .menu-prev-3 {
   box-shadow: 1px 1px 12px 5px #d6d4d4;
-  grid-column-start: 2;
-  grid-row-start: 3;
+  grid-column-start: 1;
+  grid-row-start: 2;
   overflow: hidden;
   position: relative;
+  margin: 0;
 }
 body .menus .menu-prev-3__image {
   position: absolute;
@@ -103,14 +150,21 @@ body .menus .menu-prev-3__image--zoom {
 }
 body .menus .menu-prev-3__image--zoom:hover {
   transform: scale(1.3);
-  opacity: 0.75;
+  opacity: 0.7;
+}
+@media screen and (max-width: 1000px) {
+  body .menus .menu-prev-3 {
+    grid-row-start: 3;
+    grid-column-start: 1;
+  }
 }
 body .menus .menu-prev-4 {
   box-shadow: 1px 1px 12px 5px #d6d4d4;
-  grid-column-start: 3;
-  grid-row-start: 3;
+  grid-column-start: 2;
+  grid-row-start: 2;
   overflow: hidden;
   position: relative;
+  margin: 0;
 }
 body .menus .menu-prev-4__image {
   position: absolute;
@@ -125,84 +179,136 @@ body .menus .menu-prev-4__image--zoom {
 }
 body .menus .menu-prev-4__image--zoom:hover {
   transform: scale(1.3);
-  opacity: 0.75;
+  opacity: 0.7;
+}
+@media screen and (max-width: 1000px) {
+  body .menus .menu-prev-4 {
+    grid-row-start: 4;
+    grid-column-start: 1;
+  }
 }
 body .carte {
   display: flex;
   justify-content: center;
   padding-top: 100px;
+  padding-bottom: 100px;
   background-color: #f3f3f3;
 }
 body .carte .carte-le-chic-a-la-francaise {
-  box-shadow: 1px 1px 12px 5px #d6d4d4;
-  width: 60%;
-  height: 1500px;
-  padding-bottom: 400px;
   background-color: #fff5fe;
 }
 body .carte .carte-le-chic-a-la-francaise h2 {
-  text-align: center;
-  line-height: 300px;
-  vertical-align: middle;
-  font-size: 3.5em;
+  font-size: 3em;
 }
 body .carte .carte-le-chic-a-la-francaise ul {
-  margin-left: 200px;
-  margin-right: 200px;
+  margin-left: 180px;
+  margin-right: 180px;
 }
-body .carte .carte-le-chic-a-la-francaise__items-sous-menu--item1 {
-  grid-column: 1/span 2;
+body .carte .carte-le-chic-a-la-francaise h2 {
+  font-family: "Crimson Text", serif;
+  font-size: 50px;
+}
+body .carte .carte-le-chic-a-la-francaise h3 {
+  font-family: "Crimson Text", serif;
+}
+body .carte .carte-le-chic-a-la-francaise h3 strong {
+  font-size: 30px;
+}
+body .carte .carte-le-chic-a-la-francaise ul {
+  font-family: "Crimson Text", serif;
+}
+body .carte .carte-le-chic-a-la-francaise ul li {
+  font-size: 25px;
+}
+body .carte .carte-le-chic-a-la-francaise ul strong {
+  font-size: 20px;
 }
 body .carte .carte-le-delice-des-papilles {
-  box-shadow: 1px 1px 12px 5px #d6d4d4;
-  width: 60%;
-  height: 1500px;
-  padding-bottom: 400px;
   background-color: #edefef;
 }
 body .carte .carte-le-delice-des-papilles h2 {
-  text-align: center;
-  line-height: 300px;
-  vertical-align: middle;
-  font-size: 5.5em;
+  font-size: 4.5em;
 }
 body .carte .carte-le-delice-des-papilles ul {
-  margin-left: 200px;
-  margin-right: 200px;
+  margin-left: 180px;
+  margin-right: 180px;
+}
+body .carte .carte-le-delice-des-papilles h2 {
+  font-family: "Dancing Script", cursive;
+  font-size: 70px;
+}
+body .carte .carte-le-delice-des-papilles h3 {
+  font-family: "Kalam", cursive;
+}
+body .carte .carte-le-delice-des-papilles h3 strong {
+  font-size: 40px;
+}
+body .carte .carte-le-delice-des-papilles ul {
+  font-family: "Kalam", cursive;
+}
+body .carte .carte-le-delice-des-papilles ul li {
+  font-size: 25px;
+}
+body .carte .carte-le-delice-des-papilles ul strong {
+  font-size: 20px;
 }
 body .carte .carte-la-note-enchantee {
-  box-shadow: 1px 1px 12px 5px #d6d4d4;
-  width: 60%;
-  height: 1500px;
-  padding-bottom: 400px;
   background-color: #fcdfdb;
 }
 body .carte .carte-la-note-enchantee h2 {
-  text-align: center;
-  line-height: 300px;
-  vertical-align: middle;
-  font-size: 3.5em;
+  font-size: 3em;
 }
 body .carte .carte-la-note-enchantee ul {
-  margin-left: 100px;
-  margin-right: 100px;
+  margin-left: 75px;
+  margin-right: 75px;
+}
+body .carte .carte-la-note-enchantee h2 {
+  font-family: "Cookie", cursive;
+  font-size: 70px;
+}
+body .carte .carte-la-note-enchantee h3 {
+  font-family: "Cookie", cursive;
+}
+body .carte .carte-la-note-enchantee h3 strong {
+  font-size: 50px;
+}
+body .carte .carte-la-note-enchantee ul {
+  font-family: "Cookie", cursive;
+}
+body .carte .carte-la-note-enchantee ul li {
+  font-size: 35px;
+}
+body .carte .carte-la-note-enchantee ul strong {
+  font-size: 30px;
 }
 body .carte .carte-la-palette-du-gout {
-  box-shadow: 1px 1px 12px 5px #d6d4d4;
-  width: 60%;
-  height: 1500px;
-  padding-bottom: 400px;
   background-color: #fdfffd;
 }
 body .carte .carte-la-palette-du-gout h2 {
-  text-align: center;
-  line-height: 300px;
-  vertical-align: middle;
-  font-size: 5.5em;
+  font-size: 4.5em;
 }
 body .carte .carte-la-palette-du-gout ul {
   margin-left: 150px;
   margin-right: 150px;
+}
+body .carte .carte-la-palette-du-gout h2 {
+  font-family: "Kaushan Script", cursive;
+  font-size: 70px;
+}
+body .carte .carte-la-palette-du-gout h3 {
+  font-family: "Kaushan Script", cursive;
+}
+body .carte .carte-la-palette-du-gout h3 strong {
+  font-size: 40px;
+}
+body .carte .carte-la-palette-du-gout ul {
+  font-family: "Kaushan Script", cursive;
+}
+body .carte .carte-la-palette-du-gout ul li {
+  font-size: 35px;
+}
+body .carte .carte-la-palette-du-gout ul strong {
+  font-size: 30px;
 }
 body .footer {
   position: fixed;
@@ -224,37 +330,102 @@ body .footer__items--wiggle {
   text-decoration: none;
   color: #e4bc38;
   font-weight: bolder;
+  font-family: "Josefin Sans", sans-serif;
 }
 body .footer__items--wiggle:hover {
   display: inline-block;
   animation: wiggle 0.62s cubic-bezier(0.36, 0.07, 0.19, 0.97) both;
   transform: translate3d(0, 0, 0);
 }
-
-body .carte .carte-le-chic-a-la-francaise h3, body .carte .carte-le-delice-des-papilles h3, body .carte .carte-la-note-enchantee h3, body .carte .carte-la-palette-du-gout h3 {
+body .prochainement {
+  padding-bottom: 200px;
+  background-color: #f3f3f3;
   text-align: center;
-  font-size: 1.8em;
+  font-size: 2em;
+}
+body .prochainement__animation {
+  background-color: #58967c;
+  color: #e4bc38;
+  padding: 20px;
+  width: 100px;
+  font-family: "Josefin Sans", sans-serif;
+  border-radius: 222222px 222222px 222222px 222222px;
+}
+body .prochainement__animation::after {
+  content: "";
+  animation: ect 5s ease-in-out infinite;
+}
+
+body .carte .carte-le-chic-a-la-francaise, body .carte .carte-le-delice-des-papilles, body .carte .carte-la-note-enchantee, body .carte .carte-la-palette-du-gout {
+  box-shadow: 1px 1px 12px 5px #d6d4d4;
+  width: 80%;
+  height: 1500px;
+  padding-bottom: 400px;
+}
+@media screen and (max-width: 1000px) {
+  body .carte .carte-le-chic-a-la-francaise, body .carte .carte-le-delice-des-papilles, body .carte .carte-la-note-enchantee, body .carte .carte-la-palette-du-gout {
+    width: 90%;
+    height: auto;
+  }
+}
+body .carte .carte-le-chic-a-la-francaise h2, body .carte .carte-le-delice-des-papilles h2, body .carte .carte-la-note-enchantee h2, body .carte .carte-la-palette-du-gout h2 {
+  text-align: center;
+  line-height: 300px;
+  vertical-align: middle;
+  user-select: none;
+}
+@media screen and (max-width: 1000px) {
+  body .carte .carte-le-chic-a-la-francaise h2, body .carte .carte-le-delice-des-papilles h2, body .carte .carte-la-note-enchantee h2, body .carte .carte-la-palette-du-gout h2 {
+    line-height: 100px;
+    margin-bottom: 100px;
+  }
+}
+body .carte .carte-le-chic-a-la-francaise h3, body .carte .carte-le-delice-des-papilles h3, body .carte .carte-la-note-enchantee h3, body .carte .carte-la-palette-du-gout h3 {
+  font-size: 2em;
+  display: flex;
+  justify-content: space-around;
+  text-align: center;
 }
 body .carte .carte-le-chic-a-la-francaise h3 img, body .carte .carte-le-delice-des-papilles h3 img, body .carte .carte-la-note-enchantee h3 img, body .carte .carte-la-palette-du-gout h3 img {
-  padding-left: 20px;
-  padding-right: 20px;
+  width: 30%;
+}
+@media screen and (max-width: 1000px) {
+  body .carte .carte-le-chic-a-la-francaise h3 img, body .carte .carte-le-delice-des-papilles h3 img, body .carte .carte-la-note-enchantee h3 img, body .carte .carte-la-palette-du-gout h3 img {
+    display: none;
+  }
 }
 body .carte .carte-le-chic-a-la-francaise ul, body .carte .carte-le-delice-des-papilles ul, body .carte .carte-la-note-enchantee ul, body .carte .carte-la-palette-du-gout ul {
   margin-bottom: 100px;
   padding-left: 0;
   list-style-type: none;
   margin-top: 60px;
-  font-size: 1.5em;
+  font-size: 1.2em;
   display: grid;
-  grid-template-columns: 5fr 1fr;
-  letter-spacing: 1px;
+  grid-template-columns: 6fr 1fr;
+  letter-spacing: 2px;
+}
+@media screen and (max-width: 1000px) {
+  body .carte .carte-le-chic-a-la-francaise ul, body .carte .carte-le-delice-des-papilles ul, body .carte .carte-la-note-enchantee ul, body .carte .carte-la-palette-du-gout ul {
+    grid-template-columns: 1fr;
+    margin-left: 20px;
+  }
 }
 body .carte .carte-le-chic-a-la-francaise ul li, body .carte .carte-le-delice-des-papilles ul li, body .carte .carte-la-note-enchantee ul li, body .carte .carte-la-palette-du-gout ul li {
-  grid-column-start: 1;
   padding-bottom: 20px;
+  grid-column-start: 1;
+}
+@media screen and (max-width: 1000px) {
+  body .carte .carte-le-chic-a-la-francaise ul li, body .carte .carte-le-delice-des-papilles ul li, body .carte .carte-la-note-enchantee ul li, body .carte .carte-la-palette-du-gout ul li {
+    margin-top: 50px;
+  }
 }
 body .carte .carte-le-chic-a-la-francaise ul strong, body .carte .carte-le-delice-des-papilles ul strong, body .carte .carte-la-note-enchantee ul strong, body .carte .carte-la-palette-du-gout ul strong {
   justify-self: end;
+}
+@media screen and (max-width: 1000px) {
+  body .carte .carte-le-chic-a-la-francaise ul strong, body .carte .carte-le-delice-des-papilles ul strong, body .carte .carte-la-note-enchantee ul strong, body .carte .carte-la-palette-du-gout ul strong {
+    justify-self: start;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

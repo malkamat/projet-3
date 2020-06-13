@@ -1,11 +1,45 @@
 %carte {
-    h3 {
-        text-align: center;
-        font-size: $Taille-police-titres-sous-menus;
+    
+    @media screen and (max-width: 1000px) {
+        width: 90%;
+        height: auto;
 
+    }
+    
+    box-shadow: 1px 1px 12px 5px rgb(214, 212, 212);
+    width: 80%;
+    height: 1500px;
+    padding-bottom: 400px;
+    
+    h2 {
+        text-align: center;
+        line-height: 300px;
+        vertical-align: middle;
+        user-select: none;
+        @media screen and (max-width: 1000px) {
+            line-height: 100px;
+            margin-bottom: 100px;
+
+        }
+        
+    }
+    h3 {
+        
+        font-size: $Taille-police-titres-sous-menus;
+        display: flex;
+        justify-content: space-around;
+
+        text-align: center;
+        strong {
+           
+        }
         img {
-            padding-left: 20px;
-            padding-right: 20px;
+            width: 30%;
+            @media screen and (max-width: 1000px) {
+                display: none;
+    
+            }
+            
         }
     }
 
@@ -16,17 +50,31 @@
         margin-top: 60px;
         font-size: $taille-police-textes-menus;
         display: grid;
-        grid-template-columns: 5fr 1fr;
-        letter-spacing: 1px;
+        grid-template-columns: 6fr 1fr;
+        letter-spacing: 2px;
+        @media screen and (max-width: 1000px) {
+            grid-template-columns: 1fr;
+            margin-left: 20px;
+
+        }
 
         li {
-            grid-column-start: 1;
             padding-bottom: 20px;
+            grid-column-start: 1;
+            @media screen and (max-width: 1000px) {
+
+                margin-top: 50px;
+            }
 
         }
 
         strong {
             justify-self: end;
+            @media screen and (max-width: 1000px) {
+                justify-self: start;
+               
+
+            }
         }
 
 
