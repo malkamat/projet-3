@@ -235,13 +235,13 @@ body .carte .carte-le-delice-des-papilles ul {
 }
 body .carte .carte-le-delice-des-papilles h2 {
   font-family: "Dancing Script", cursive;
-  font-size: 70px;
+  font-size: 75px;
 }
 body .carte .carte-le-delice-des-papilles h3 {
   font-family: "Kalam", cursive;
 }
 body .carte .carte-le-delice-des-papilles h3 strong {
-  font-size: 40px;
+  font-size: 30px;
 }
 body .carte .carte-le-delice-des-papilles ul {
   font-family: "Kalam", cursive;
@@ -305,10 +305,10 @@ body .carte .carte-la-palette-du-gout ul {
   font-family: "Kaushan Script", cursive;
 }
 body .carte .carte-la-palette-du-gout ul li {
-  font-size: 35px;
+  font-size: 25px;
 }
 body .carte .carte-la-palette-du-gout ul strong {
-  font-size: 30px;
+  font-size: 20px;
 }
 body .footer {
   position: fixed;
